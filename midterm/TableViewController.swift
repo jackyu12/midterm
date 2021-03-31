@@ -15,6 +15,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getdata()
+        //self.tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -72,6 +73,7 @@ class TableViewController: UITableViewController {
                         self.arr.append(d1)
                     }
                     seal.fulfill(temp)
+                    self.tableView.reloadData()
                 }else{
                     seal.reject(response.error!)
                 }
